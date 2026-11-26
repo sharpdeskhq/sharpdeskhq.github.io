@@ -1,1 +1,111 @@
-index.html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Who Owes Me? Free customer debt tracker | Sharp Desk</title>
+<meta name="description" content="A free tracker for Nigerian shop owners: see who owes you, how much and since when, plus 12 WhatsApp reminder messages.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1A2540;--navy:#24334D;--orange:#F3A43B;--amber:#9A5B04;--paper:#F5F6F9;--line:#DCE1EA;--mute:#5B667A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.01em}
+.band{background:var(--navy);color:#fff;position:relative;padding-bottom:84px}
+.band:before{content:"";position:absolute;left:0;top:0;width:100%;height:10px;background:var(--ink)}
+.band:after{content:"";position:absolute;left:20px;top:0;width:64px;height:10px;background:var(--orange)}
+nav{padding:34px 0 0;display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;text-decoration:none}
+nav a.back{font-size:15px;opacity:.86;text-decoration:none}
+.hero{padding:48px 0 0}
+.hero h1{font-weight:800;font-size:clamp(34px,7.4vw,60px);line-height:1.04;max-width:16ch}
+.hero p{margin-top:18px;max-width:52ch;color:#D3DAE8;font-size:18px}
+.tag{display:inline-block;margin-top:22px;border:1px solid #4A5B78;border-radius:999px;padding:4px 14px;font-size:14px;color:#D3DAE8}
+main{margin-top:-52px;position:relative;z-index:1;padding-bottom:60px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 40px -22px rgba(26,37,64,.35);overflow:hidden}
+.grid{display:grid;grid-template-columns:1fr;}
+@media(min-width:820px){.grid{grid-template-columns:1.05fr 1fr}}
+.pic{background:var(--paper);display:flex;align-items:center;padding:18px}
+.pic img{width:100%;height:auto;display:block;border-radius:6px}
+.info{padding:28px 26px}
+.info h2{font-size:26px;line-height:1.15;margin-bottom:14px}
+.inc{list-style:none;margin:0 0 20px}
+.inc li{padding:9px 0 9px 28px;border-bottom:1px solid var(--line);position:relative;font-size:15.5px}
+.inc li:before{content:"";position:absolute;left:4px;top:17px;width:10px;height:10px;background:var(--orange);border-radius:2px}
+.price{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:34px}
+.price small{font:400 14px "Public Sans",system-ui,sans-serif;color:var(--mute);margin-left:8px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{display:inline-block;padding:14px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--navy);font-size:16px}
+.btn.main{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.btn.off{background:#E6E9F0;border-color:#E6E9F0;color:var(--mute);pointer-events:none}
+.note{margin-top:10px;font-size:13.5px;color:var(--mute)}
+section{margin-top:44px}
+section h2{font-size:26px;margin-bottom:16px}
+.steps{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}
+.step b{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--amber);font-size:14px}
+.step h3{font-size:18px;margin:4px 0 6px}
+.step p{font-size:15px;color:var(--mute)}
+.chan{background:var(--navy);color:#fff;border-radius:14px;padding:26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.chan h3{font-size:22px}.chan p{color:#D3DAE8;font-size:15px;margin-top:4px;max-width:46ch}
+.chan .btn{border-color:var(--orange);color:#fff}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+summary{padding:15px 18px;font-weight:600;cursor:pointer}
+details p{padding:0 18px 16px;color:var(--mute);font-size:15px}
+footer{background:var(--ink);color:#B9C3D6;padding:30px 0;font-size:14px}
+footer a{margin-right:18px}
+</style>
+</head>
+<body>
+<header class="band"><div class="wrap">
+<nav><a class="brand" href="../">Sharp Desk</a><a class="back" href="../">All products</a></nav>
+<div class="hero"><h1>Find out who owes you money</h1>
+<p>A free tracker for shop owners. See who owes you, how much, and since when. Then send a polite WhatsApp reminder in one tap.</p>
+<span class="tag">Free. Works in Excel and Google Sheets. Print it if you prefer paper.</span></div>
+</div></header>
+<main><div class="wrap">
+<div class="card"><div class="grid">
+<div class="pic"><img src="img/preview.jpg" alt="Cover and WhatsApp reminders page of the Who Owes Me guide" width="1200" height="850"></div>
+<div class="info">
+<h2>Who Owes Me?<br>Customer debt tracker</h2>
+<ul class="inc">
+<li>Excel / Google Sheets tracker for up to 200 customers</li>
+<li>Balance and status work themselves out</li>
+<li>Summary with your 5 biggest balances</li>
+<li>12 polite WhatsApp reminder messages</li>
+<li>10 credit rules for your shop</li>
+<li>7-page printable guide and debt book (PDF)</li>
+</ul>
+<div class="price">₦0<small>Free. Instant download.</small></div>
+<div class="btns"><a id="get" class="btn main" href="#">Get the free tracker</a></div>
+<p class="note" id="getnote">You will be asked for your name and email on Selar, then you can download straight away.</p>
+</div></div></div>
+
+<section><h2>How it works</h2><div class="steps">
+<div class="step"><b>Step 1</b><h3>Record the sale</h3><p>Add one row for each credit sale: customer, item, total, and the date they promised to pay.</p></div>
+<div class="step"><b>Step 2</b><h3>Record payments</h3><p>Type what they paid. The balance and status update, and overdue customers turn red.</p></div>
+<div class="step"><b>Step 3</b><h3>Remind them politely</h3><p>Every Friday, copy a message, change the brackets and send it on WhatsApp.</p></div>
+</div></section>
+
+<section><div class="chan"><div><h3>Get more free tools</h3><p>Join the Sharp Desk WhatsApp Channel for new free tools, tips for shop owners and launch news. Nobody sees your number.</p></div>
+<a class="btn" id="chan" href="https://whatsapp.com/channel/0029VbEnCba9hXExxvmUXx3G" rel="noopener">Join the Channel</a></div></section>
+
+<section><h2>Questions</h2>
+<details><summary>Is it really free?</summary><p>Yes. It costs ₦0. Selar asks for your name and email so it can send you the download.</p></details>
+<details><summary>Can I use it on my phone?</summary><p>Yes. Open the file in the Google Sheets app. The guide explains how, in a few taps.</p></details>
+<details><summary>Do I need Excel?</summary><p>No. Google Sheets is free and works the same way. You can also print the debt book pages and write by hand.</p></details>
+<details><summary>Does it track stock and profit?</summary><p>No. This free tracker does one job: who owes you. Sharp Desk is building a fuller Shop Owner Stock and Debt Book. Join the Channel to hear first.</p></details>
+</section>
+</div></main>
+<footer><div class="wrap"><a href="../">Sharp Desk store</a><a href="https://selar.com/m/sharpdesk">Selar</a><a href="mailto:sharpdeskhq@gmail.com">sharpdeskhq@gmail.com</a></div></footer>
+<script>
+/* Paste the Selar FREE product link between the quotes, e.g. https://selar.com/xxxxxxxx */
+var SELAR_FREE_URL="";
+(function(){var a=document.getElementById("get");
+if(SELAR_FREE_URL){a.href=SELAR_FREE_URL}else{a.className="btn off";a.textContent="Coming soon";a.removeAttribute("href");document.getElementById("getnote").textContent="The free download opens very soon. Join the Channel below to be told the moment it does."}})();
+</script>
+</body></html>
