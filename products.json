@@ -1,0 +1,57 @@
+{
+  "store": {
+    "name": "Sharp Desk",
+    "email": "sharpdeskhq@gmail.com",
+    "selar": "https://selar.com/m/sharpdesk",
+    "refunds": "https://selar.com/m/sharpdesk/legal/refunds-policy"
+  },
+  "links": {
+    "whatsappChannel": "https://whatsapp.com/channel/0029VbEnCba9hXExxvmUXx3G",
+    "tiktok": "https://www.tiktok.com/@sharpdeskhq",
+    "youtube": "https://youtube.com/@sharpdeskhq",
+    "instagram": "https://www.instagram.com/sharpdeskhq.ng"
+  },
+  "freebies": [
+    {
+      "title": "Quotation form",
+      "text": "Itemised quote with deposit, balance and collection date. Print it or fill it on your phone.",
+      "file": "Sharp_Desk_Free_Quotation_Form.pdf"
+    },
+    {
+      "title": "Measurement form",
+      "text": "Customer measurements with units, fit notes and the date taken, so nothing is guessed at fitting.",
+      "file": "Sharp_Desk_Free_Measurement_Form.pdf"
+    }
+  ],
+  "products": [
+    {
+      "no": "001",
+      "title": "The Bespoke Fashion Business Kit",
+      "for": "Nigerian tailors and designers who sew to order",
+      "summary": "One system for every custom order, from first enquiry to collection day.",
+      "price": 5000,
+      "image": "img/01-cover.jpg",
+      "imageAlt": "The Bespoke Fashion Business Kit: printable quotation, measurement and receipt forms",
+      "page": "kit/",
+      "buy": "https://selar.com/bespoke-fashion-kit?add_to_cart=1",
+      "details": [
+        [
+          "Includes",
+          "8 printable forms and an Excel / Google Sheets tracker"
+        ],
+        [
+          "Covers",
+          "Quotes, deposits, measurements, fittings, balances, delivery"
+        ],
+        [
+          "Works on",
+          "Phone, laptop and paper"
+        ],
+        [
+          "Delivery",
+          "Instant digital download"
+        ]
+      ]
+    }
+  ]
+}
