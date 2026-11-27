@@ -131,7 +131,7 @@ footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
       <a class="brand" href="./">Sharp Desk</a>
       <ul>
         <li><a href="#shop">Shop</a></li>
-        <li><a href="#free">Free forms</a></li>
+        <li><a href="#free">Free tools</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </nav>
@@ -155,7 +155,7 @@ footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
     </section>
 
     <section id="free" aria-labelledby="free-h">
-      <div class="head"><h2 id="free-h">Free forms</h2><p>Two forms from the kit, free to download. No sign-up.</p></div>
+      <div class="head"><h2 id="free-h">Free tools</h2><p>Free to use. The two forms download straight away. The tracker asks for your name and email on Selar.</p></div>
       <div class="free" id="free-list"></div>
       <div class="chan" id="chan">
         <p><b>Get new free tools first</b>Join the Sharp Desk WhatsApp Channel for free forms, tips and early access.</p>
@@ -259,7 +259,8 @@ footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
       var c = el("div", {"class":"fcard"});
       c.appendChild(el("h3", null, f.title));
       c.appendChild(el("p", null, f.text));
-      c.appendChild(el("a", {"class":"btn", "href":f.file, "download":""}, "Download PDF"));
+      if(f.link){c.appendChild(el("a", {"class":"btn main", "href":f.link, "rel":"noopener"}, f.button || "Get it free"));}
+      else{c.appendChild(el("a", {"class":"btn", "href":f.file, "download":""}, "Download PDF"));}
       fl.appendChild(c);
     });
 

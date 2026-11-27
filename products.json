@@ -13,6 +13,12 @@
   },
   "freebies": [
     {
+      "title": "Who Owes Me? Customer debt tracker",
+      "text": "See who owes your shop money, how much and since when. Excel / Google Sheets tracker plus 12 WhatsApp reminder messages and a printable guide.",
+      "link": "https://selar.com/who-owes-me?add_to_cart=1",
+      "button": "Get the free tracker"
+    },
+    {
       "title": "Quotation form",
       "text": "Itemised quote with deposit, balance and collection date. Print it or fill it on your phone.",
       "file": "Sharp_Desk_Free_Quotation_Form.pdf"
